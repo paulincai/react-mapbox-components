@@ -63,7 +63,7 @@ var _default = (function (_MapComponent) {
       index: '1.1',
       category: 'Mapbox',
       title: 'Mapbox',
-      description: 'Creates an instance of a Mapbox map. See [here](https://www.mapbox.com/mapbox.js/api/v2.2.1/l-mapbox-map/) for more details.' + '\n\n' + '*Note:* The props documentation is incomplete. You can feed any of the map `options` into the `props` directly.' + '\n\n' + 'Example: `<Mapbox gridLayer={{ ... }} />`',
+      description: 'Creates an instance of a Mapbox map. See [here](https://www.mapbox.com/mapbox.js/api/v2.2.1/l-mapbox-map/) for more details.' + '\n\n' + '*Note:* The props documentation is incomplete. You can feed any of the map `options` into the `props` directly.' + '\n\n' + 'Example: `<Mapbox gridLayer={{ ... }} />`' + '\n\n' + 'Leaflet events start with `onLeaflet` eg `<Mapbox onLeafletMoveend={Fn} />`',
       code: '\nvar Mapbox = require(\'react-mapbox-components\').Map\n\n<Mapbox mapboxAccessToken=\'String\'></Mapbox>'
     },
     enumerable: true

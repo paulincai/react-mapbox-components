@@ -28,7 +28,9 @@ export default class extends MapComponent {
     '\n\n' +
     '*Note:* The props documentation is incomplete. You can feed any of the map `options` into the `props` directly.' +
     '\n\n' +
-    'Example: `<Mapbox gridLayer={{ ... }} />`',
+    'Example: `<Mapbox gridLayer={{ ... }} />`' +
+    '\n\n' +
+    'Leaflet events start with `onLeaflet` eg `<Mapbox onLeafletMoveend={Fn} />`',
     code: `
 var Mapbox = require('react-mapbox-components').Map
 
