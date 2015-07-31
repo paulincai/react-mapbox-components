@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       options: {
         configFile: {
           files: [
-            process.cwd() + '/src/vendor/mapbox.css'
+            '//api.mapbox.com/mapbox.js/v2.2.1/mapbox.css'
           ]
         }
       }
