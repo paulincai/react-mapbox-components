@@ -103,17 +103,10 @@ var Mapbox = require('react-mapbox-components').Map
   }
 
   componentDidMount() {
-    let mapId
 
     L.mapbox.accessToken = this.props.accessToken
 
-    if (this.props.ref) {
-      mapId = React.findDOMNode(this.props.ref)
-    } else {
-      mapId = this.state.id
-    }
-
-    this.leafletElement = L.mapbox.map(mapId, this.props.tileId, this.props)
+    this.leafletElement = L.mapbox.map(React.findDOMNode(this.refs[this.state.id]), this.props.tileId, this.props)
     super.componentDidMount()
     this.setState({map: this.leafletElement})
   }
@@ -147,7 +140,7 @@ var Mapbox = require('react-mapbox-components').Map
     }) : null
 
     return (
-      <div className={this.props.className} id={this.state.id} style={this.props.styles}>
+      <div className={this.props.className} ref={this.state.id} id={this.state.id} style={this.props.styles}>
         {children}
       </div>
     )

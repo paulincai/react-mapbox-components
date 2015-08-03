@@ -141,17 +141,10 @@ var _default = (function (_MapComponent) {
   _createClass(_default, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var mapId = undefined;
 
       _leaflet2['default'].mapbox.accessToken = this.props.accessToken;
 
-      if (this.props.ref) {
-        mapId = _react2['default'].findDOMNode(this.props.ref);
-      } else {
-        mapId = this.state.id;
-      }
-
-      this.leafletElement = _leaflet2['default'].mapbox.map(mapId, this.props.tileId, this.props);
+      this.leafletElement = _leaflet2['default'].mapbox.map(_react2['default'].findDOMNode(this.refs[this.state.id]), this.props.tileId, this.props);
       _get(Object.getPrototypeOf(_default.prototype), 'componentDidMount', this).call(this);
       this.setState({ map: this.leafletElement });
     }
@@ -194,7 +187,7 @@ var _default = (function (_MapComponent) {
 
       return _react2['default'].createElement(
         'div',
-        { className: this.props.className, id: this.state.id, style: this.props.styles },
+        { className: this.props.className, ref: this.state.id, id: this.state.id, style: this.props.styles },
         children
       );
     }
