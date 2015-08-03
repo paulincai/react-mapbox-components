@@ -84,7 +84,7 @@ var Mapbox = require('react-mapbox-components').Map
      * additional user-defined radium styles to apply
      */
     styles: PropTypes.object,
-    children: PropTypes.element
+    children: PropTypes.any
   }
 
   static defaultProps = {

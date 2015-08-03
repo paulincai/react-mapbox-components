@@ -114,7 +114,7 @@ var _default = (function (_MapComponent) {
        * additional user-defined radium styles to apply
        */
       styles: _react.PropTypes.object,
-      children: _react.PropTypes.element
+      children: _react.PropTypes.any
     },
     enumerable: true
   }, {
