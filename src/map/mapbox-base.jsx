@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * Base code came from
  * https://raw.githubusercontent.com/PaulLeCam/react-leaflet/master/src/Map.js
@@ -101,9 +103,17 @@ var Mapbox = require('react-mapbox-components').Map
   }
 
   componentDidMount() {
+    let mapId
+
     L.mapbox.accessToken = this.props.accessToken
 
-    this.leafletElement = L.mapbox.map(React.findDOMNode(this.refs.mapbox), this.props.tileId, this.props)
+    if (this.props.ref) {
+      mapId = React.findDOMNode(this.props.ref)
+    } else {
+      mapId = this.state.id
+    }
+
+    this.leafletElement = L.mapbox.map(mapId, this.props.tileId, this.props)
     super.componentDidMount()
     this.setState({map: this.leafletElement})
   }
@@ -137,7 +147,7 @@ var Mapbox = require('react-mapbox-components').Map
     }) : null
 
     return (
-      <div ref='mapbox' className={this.props.className} id={this.state.id} style={this.props.styles}>
+      <div className={this.props.className} id={this.state.id} style={this.props.styles}>
         {children}
       </div>
     )

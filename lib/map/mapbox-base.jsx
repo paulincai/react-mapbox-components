@@ -1,10 +1,10 @@
+'use strict';
+
 /**
  * Base code came from
  * https://raw.githubusercontent.com/PaulLeCam/react-leaflet/master/src/Map.js
  * adapted to Mapbox
  */
-
-'use strict';
 
 Object.defineProperty(exports, '__esModule', {
   value: true
@@ -141,9 +141,17 @@ var _default = (function (_MapComponent) {
   _createClass(_default, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
+      var mapId = undefined;
+
       _leaflet2['default'].mapbox.accessToken = this.props.accessToken;
 
-      this.leafletElement = _leaflet2['default'].mapbox.map(_react2['default'].findDOMNode(this.refs.mapbox), this.props.tileId, this.props);
+      if (this.props.ref) {
+        mapId = _react2['default'].findDOMNode(this.props.ref);
+      } else {
+        mapId = this.state.id;
+      }
+
+      this.leafletElement = _leaflet2['default'].mapbox.map(mapId, this.props.tileId, this.props);
       _get(Object.getPrototypeOf(_default.prototype), 'componentDidMount', this).call(this);
       this.setState({ map: this.leafletElement });
     }
@@ -186,7 +194,7 @@ var _default = (function (_MapComponent) {
 
       return _react2['default'].createElement(
         'div',
-        { ref: 'mapbox', className: this.props.className, id: this.state.id, style: this.props.styles },
+        { className: this.props.className, id: this.state.id, style: this.props.styles },
         children
       );
     }
