@@ -70,7 +70,7 @@ var Geocoder = require('react-mapbox-components').Geocoder
   }
 
   render() {
-    return null
+    return <span></span>
   }
 }
 

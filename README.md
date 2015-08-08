@@ -20,10 +20,6 @@ Edit `examples/config.js` and fill in your Mapbox API key to see the examples an
 
 `npm run dev`
 
-### Distribution
-
-`npm run dist`
-
 - transpiles `src/` to `dist/`
 - generates styleguide documentation into `artifacts/docs/style-guide/`
 

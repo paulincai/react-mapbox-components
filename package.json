@@ -1,6 +1,6 @@
 {
   "name": "react-mapbox-components",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Mapbox library converted to react for use with react-leaflet.",
   "main": "lib/index.js",
   "keywords": "react,mapbox,leaflet,react-leaflet,mapbox.js",
@@ -16,18 +16,18 @@
   "scripts": {
     "view-docs": "grunt view-styleguide",
     "dev": "grunt react-baseplate-dev",
-    "dist": "grunt react-baseplate-dist"
-  },
-  "peerDependencies": {
-    "react": "^0.13.3"
+    "prepublish": "grunt react-baseplate-dist"
   },
   "license": "MIT",
+  "peerDependencies": {
+    "react": "^0.13.3",
+    "leaflet": "~0.7.3",
+    "react-leaflet": "~0.6.2",
+    "mapbox.js": "~2.2.1"
+  },
   "dependencies": {
-    "leaflet": "^0.7.3",
     "lodash": "^3.10.0",
-    "mapbox.js": "^2.2.1",
     "radium": "^0.13.5",
-    "react-leaflet": "^0.6.2",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
