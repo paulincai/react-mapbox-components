@@ -28,6 +28,10 @@ export default class extends MapComponent {
      */
     options: React.PropTypes.object,
     /**
+     * When the geocode input obtains focus. First parameter is an `event` object.
+     */
+    onInputFocus: React.PropTypes.func,
+    /**
      * Success in finding a location. The event's results property contains the raw results
      */
     onFound: React.PropTypes.func,
@@ -65,14 +69,14 @@ var Geocoder = require('react-mapbox-components').Geocoder
 `
   }
 
-
   static defaultProps = {
     geocoderIdx: 'mapbox.places',
     options: {},
     onFound: function() {},
     onError: function() {},
     onSelect: function() {},
-    onAutoselect: function() {}
+    onAutoselect: function() {},
+    onInputFocus: function() {}
   }
 
   constructor(props) {
@@ -85,6 +89,12 @@ var Geocoder = require('react-mapbox-components').Geocoder
     let geocoder = L.mapbox.geocoderControl(this.props.geocoderIdx, this.props.options)
     this.props.map.geocoder = geocoder
     this.props.map.addControl(this.props.map.geocoder)
+
+    let geocoderInput = document.querySelector('.leaflet-control-mapbox-geocoder-form > input')
+
+    if (geocoderInput) {
+      geocoderInput.addEventListener('focus', this.props.onInputFocus)
+    }
 
     geocoder.on('found', this.props.onFound)
     geocoder.on('error', this.props.onError)
@@ -99,6 +109,12 @@ var Geocoder = require('react-mapbox-components').Geocoder
 
   componentWillUnmount() {
     super.componentWillUnmount()
+    let geocoderInput = document.querySelector('.leaflet-control-mapbox-geocoder-form > input')
+
+    if (geocoderInput) {
+      geocoderInput.removeEventListener('focus', this.props.onInputFocus)
+    }
+
     this.props.map.removeControl(this.props.map.geocoder)
   }
 

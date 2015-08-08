@@ -1,3 +1,7 @@
+# 0.0.17 (2015-08-08)
+
+  * Added `onInputFocus` to the geocoder
+
 # 0.0.16 (2015-08-08)
 
   * Added event handlers to the geocoder
