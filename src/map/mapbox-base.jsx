@@ -18,6 +18,19 @@ import latlngType from 'react-leaflet/lib/types/latlng'
 
 const normalizeCenter = pos => isArray(pos) ? pos : [pos.lat, pos.lng || pos.lon]
 
+/**
+ * Creates an instance of a Mapbox map. See [here](https://www.mapbox.com/mapbox.js/api/v2.2.1/l-mapbox-map/) for more details.
+ *
+ * *Note:* The props documentation is incomplete. You can feed any of the map `options` into the `props` directly.
+ *
+ * Example: `<Mapbox gridLayer={{ ... }} />`
+ *
+ * Leaflet events start with `onLeaflet` eg `<Mapbox onLeafletMoveend={Fn} />`
+ *
+ * You can access the instance of the Mapbox/Leaflet map by assigning a `ref` to the component and calling `getMap()`:
+ *
+ * `this.refs[<ref_name>].getMap()`
+ */
 export default class extends MapComponent {
 
   static displayName = 'MapboxMap'
@@ -26,13 +39,6 @@ export default class extends MapComponent {
     index: '1.1',
     category: 'Mapbox',
     title: 'Mapbox',
-    description: 'Creates an instance of a Mapbox map. See [here](https://www.mapbox.com/mapbox.js/api/v2.2.1/l-mapbox-map/) for more details.' +
-    '\n\n' +
-    '*Note:* The props documentation is incomplete. You can feed any of the map `options` into the `props` directly.' +
-    '\n\n' +
-    'Example: `<Mapbox gridLayer={{ ... }} />`' +
-    '\n\n' +
-    'Leaflet events start with `onLeaflet` eg `<Mapbox onLeafletMoveend={Fn} />`',
     code: `
 var Mapbox = require('react-mapbox-components').Map
 
@@ -126,6 +132,10 @@ var Mapbox = require('react-mapbox-components').Map
     else if (zoom && zoom !== prevProps.zoom) {
       this.leafletElement.setZoom(zoom)
     }
+  }
+
+  getMap() {
+    return this.leafletElement
   }
 
   componentWillUnmount() {

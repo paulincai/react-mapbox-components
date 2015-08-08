@@ -18,8 +18,8 @@ const GeoCoderExample = React.createClass({
   render() {
     return (
       <div style={{ width: '500px', height: '400px' }}>
-        <Mapbox accessToken={config.mapboxAccessToken}>
-          <Geocoder />
+        <Mapbox ref='test' accessToken={config.mapboxAccessToken}>
+          <Geocoder options={{ autocomplete: true }} />
         </Mapbox>
       </div>
     )
