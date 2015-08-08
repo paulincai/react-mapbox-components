@@ -1,6 +1,6 @@
 {
   "name": "react-mapbox-components",
-  "version": "0.0.13",
+  "version": "0.0.15",
   "description": "Mapbox library converted to react for use with react-leaflet.",
   "main": "lib/index.js",
   "keywords": "react,mapbox,leaflet,react-leaflet,mapbox.js",
@@ -10,7 +10,7 @@
     "url": "https://github.com/theogravity/react-mapbox-components.git"
   },
   "bugs": {
-    "url" : "https://github.com/theogravity/react-mapbox-components/issues",
+    "url": "https://github.com/theogravity/react-mapbox-components/issues",
     "email": "theo@suteki.nu"
   },
   "scripts": {

@@ -1,5 +1,3 @@
-alert('fill in your access token and then remove this alert')
-
 module.exports = {
-  mapboxAccessToken: 'Your token here'
+  mapboxAccessToken: 'pk.eyJ1IjoicGVyc29uYWxpZmUiLCJhIjoiNzE1MGJkOGY2OWY2ZWZjYzk0ZjgzNDVkODc5ODQzZGUifQ.vTW_V6qqComl2Wq4hXquyQ'
 }
