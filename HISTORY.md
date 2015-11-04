@@ -1,3 +1,7 @@
+# 0.0.19 (2015-11-04)
+
+  * Update package deps
+
 # 0.0.18 (2015-09-01)
 
   * Move `leaflet` to `devDependencies`

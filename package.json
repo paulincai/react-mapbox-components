@@ -1,6 +1,6 @@
 {
   "name": "react-mapbox-components",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Mapbox library converted to react for use with react-leaflet.",
   "main": "lib/index.js",
   "keywords": "react,mapbox,leaflet,react-leaflet,mapbox.js",
@@ -21,12 +21,12 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "^0.13.3",
-    "react-leaflet": "~0.6.2",
-    "mapbox.js": "~2.2.1"
+    "react-leaflet": "~0.7.0",
+    "mapbox.js": "^2.2.3"
   },
   "dependencies": {
     "lodash": "^3.10.0",
-    "radium": "^0.13.5",
+    "radium": "^0.14.3",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "jsx-test": "^0.7.5",
     "mocha": "^2.2.5",
     "react-baseplate": "~0.0.14",
-    "leaflet": "~0.7.3",
+    "leaflet": "~0.7.7",
     "webpack": "^1.10.5"
   }
 }
