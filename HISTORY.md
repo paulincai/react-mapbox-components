@@ -1,3 +1,7 @@
+# 0.1.0 (2015-11-09)
+
+  * Update to use react 0.14
+
 # 0.0.19 (2015-11-04)
 
   * Update package deps
