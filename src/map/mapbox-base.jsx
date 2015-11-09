@@ -10,7 +10,9 @@ import isArray from 'lodash/lang/isArray'
 import uniqueId from 'lodash/utility/uniqueId'
 
 import React, { PropTypes } from 'react'
+import ReactDOM from 'react-dom'
 import L from 'leaflet'
+import Radium from 'radium'
 import { MapComponent } from 'react-leaflet'
 
 import boundsType from 'react-leaflet/lib/types/bounds'
@@ -31,6 +33,7 @@ const normalizeCenter = pos => isArray(pos) ? pos : [pos.lat, pos.lng || pos.lon
  *
  * `this.refs[<ref_name>].getMap()`
  */
+@Radium
 export default class extends MapComponent {
 
   static displayName = 'MapboxMap'
@@ -112,9 +115,9 @@ var Mapbox = require('react-mapbox-components').Map
 
     L.mapbox.accessToken = this.props.accessToken
 
-    this.leafletElement = L.mapbox.map(React.findDOMNode(this), this.props.tileId, this.props)
+    this.leafletElement = L.mapbox.map(ReactDOM.findDOMNode(this), this.props.tileId, this.props)
     super.componentDidMount()
-    this.setState({map: this.leafletElement})
+    this.forceUpdate()
   }
 
   shouldUpdateCenter(next, prev) {
