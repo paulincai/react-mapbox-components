@@ -1,3 +1,7 @@
+# 0.2.0 (2016-07-08)
+
+  * Update components to match constructor signature of current `MapControl` in `react-leaflet` 0.12.1
+
 # 0.1.1 (2015-11-09)
 
   * Update to use react 0.14
