@@ -1,3 +1,7 @@
+# 0.2.1 (2016-07-08)
+
+  * Update transpiled lib folder
+
 # 0.2.0 (2016-07-08)
 
   * Update components to match constructor signature of current `MapControl` in `react-leaflet` 0.12.1
