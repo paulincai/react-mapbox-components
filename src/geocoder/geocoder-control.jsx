@@ -2,7 +2,6 @@ import assign from 'lodash/object/assign'
 import React from 'react'
 import { MapComponent } from 'react-leaflet'
 import L from 'leaflet'
-import Radium from 'radium'
 
 /**
  *  Creates an instance of a Mapbox Geocoder. See [here](https://www.mapbox.com/mapbox.js/api/v2.2.1/l-mapbox-geocodercontrol/#section-l-mapbox-geocodercontrol) for more details.
@@ -13,7 +12,6 @@ import Radium from 'radium'
  *
  * This is available after the Geocoder has mounted.
  */
-@Radium
 export default class extends MapComponent {
 
   static displayName = 'MapboxGeocoder'

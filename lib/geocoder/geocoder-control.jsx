@@ -28,10 +28,6 @@ var _leaflet = require('leaflet');
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
 
-var _radium = require('radium');
-
-var _radium2 = _interopRequireDefault(_radium);
-
 /**
  *  Creates an instance of a Mapbox Geocoder. See [here](https://www.mapbox.com/mapbox.js/api/v2.2.1/l-mapbox-geocodercontrol/#section-l-mapbox-geocodercontrol) for more details.
  *
@@ -114,15 +110,15 @@ var _default = (function (_MapComponent) {
   }]);
 
   function _default(props, context) {
-    _classCallCheck(this, _default2);
+    _classCallCheck(this, _default);
 
-    _get(Object.getPrototypeOf(_default2.prototype), 'constructor', this).call(this, props, context);
+    _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).call(this, props, context);
   }
 
   _createClass(_default, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      _get(Object.getPrototypeOf(_default2.prototype), 'componentWillMount', this).call(this);
+      _get(Object.getPrototypeOf(_default.prototype), 'componentWillMount', this).call(this);
 
       var geocoder = _leaflet2['default'].mapbox.geocoderControl(this.props.geocoderIdx, this.props.options);
       this.props.map.geocoder = geocoder;
@@ -142,12 +138,12 @@ var _default = (function (_MapComponent) {
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      _get(Object.getPrototypeOf(_default2.prototype), 'componentDidMount', this).call(this);
+      _get(Object.getPrototypeOf(_default.prototype), 'componentDidMount', this).call(this);
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      _get(Object.getPrototypeOf(_default2.prototype), 'componentWillUnmount', this).call(this);
+      _get(Object.getPrototypeOf(_default.prototype), 'componentWillUnmount', this).call(this);
       var geocoderInput = document.querySelector('.leaflet-control-mapbox-geocoder-form > input');
 
       if (geocoderInput) {
@@ -176,8 +172,6 @@ var _default = (function (_MapComponent) {
     }
   }]);
 
-  var _default2 = _default;
-  _default = (0, _radium2['default'])(_default) || _default;
   return _default;
 })(_reactLeaflet.MapComponent);
 
