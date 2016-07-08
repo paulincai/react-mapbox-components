@@ -104,8 +104,8 @@ var Mapbox = require('react-mapbox-components').Map
     }
   }
 
-  constructor(props) {
-    super(props)
+  constructor(props, context) {
+    super(props, context)
     this.state = {
       id: props.id || uniqueId('map')
     }

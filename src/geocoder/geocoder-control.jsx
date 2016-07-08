@@ -81,8 +81,8 @@ var Geocoder = require('react-mapbox-components').Geocoder
     onInputFocus: function() {}
   }
 
-  constructor(props) {
-    super(props)
+  constructor(props, context) {
+    super(props, context)
   }
 
   componentWillMount() {
