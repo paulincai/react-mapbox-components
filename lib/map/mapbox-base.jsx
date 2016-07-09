@@ -71,7 +71,14 @@ var normalizeCenter = function normalizeCenter(pos) {
 var _default = (function (_MapComponent) {
   _inherits(_default, _MapComponent);
 
-  _createClass(_default, null, [{
+  _createClass(_default, [{
+    key: 'getChildContext',
+    value: function getChildContext() {
+      return {
+        map: this.leafletElement
+      };
+    }
+  }], [{
     key: 'displayName',
     value: 'MapboxMap',
     enumerable: true
@@ -142,6 +149,12 @@ var _default = (function (_MapComponent) {
         width: '100%',
         height: '100%'
       }
+    },
+    enumerable: true
+  }, {
+    key: 'childContextTypes',
+    value: {
+      map: _react.PropTypes.instanceOf(_leaflet2['default'].Map)
     },
     enumerable: true
   }]);

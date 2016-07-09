@@ -79,6 +79,16 @@ var Geocoder = require('react-mapbox-components').Geocoder
     onInputFocus: function() {}
   }
 
+  static childContextTypes = {
+    map: PropTypes.instanceOf(L.Map)
+  }
+
+  getChildContext () {
+    return {
+      map: this.leafletElement
+    }
+  }
+
   constructor(props, context) {
     super(props, context)
   }

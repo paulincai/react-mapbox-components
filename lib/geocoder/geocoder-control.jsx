@@ -41,7 +41,14 @@ var _leaflet2 = _interopRequireDefault(_leaflet);
 var _default = (function (_MapComponent) {
   _inherits(_default, _MapComponent);
 
-  _createClass(_default, null, [{
+  _createClass(_default, [{
+    key: 'getChildContext',
+    value: function getChildContext() {
+      return {
+        map: this.leafletElement
+      };
+    }
+  }], [{
     key: 'displayName',
     value: 'MapboxGeocoder',
     enumerable: true
@@ -105,6 +112,12 @@ var _default = (function (_MapComponent) {
       onSelect: function onSelect() {},
       onAutoselect: function onAutoselect() {},
       onInputFocus: function onInputFocus() {}
+    },
+    enumerable: true
+  }, {
+    key: 'childContextTypes',
+    value: {
+      map: PropTypes.instanceOf(_leaflet2['default'].Map)
     },
     enumerable: true
   }]);

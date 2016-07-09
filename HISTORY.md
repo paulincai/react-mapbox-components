@@ -1,3 +1,7 @@
+# 0.2.3 (2016-07-08)
+
+  * Add missing context items to controls
+
 # 0.2.2 (2016-07-08)
 
   * Remove radium dep

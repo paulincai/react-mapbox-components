@@ -101,6 +101,16 @@ var Mapbox = require('react-mapbox-components').Map
       height: '100%'
     }
   }
+  
+  static childContextTypes = {
+    map: PropTypes.instanceOf(L.Map)
+  }
+
+  getChildContext () {
+    return {
+      map: this.leafletElement
+    }
+  }
 
   constructor(props, context) {
     super(props, context)
