@@ -154,7 +154,7 @@ var _default = (function (_MapComponent) {
   }, {
     key: 'childContextTypes',
     value: {
-      map: _react.PropTypes.instanceOf(_leaflet2['default'].Map)
+      map: _react2['default'].PropTypes.instanceOf(_leaflet2['default'].Map)
     },
     enumerable: true
   }]);

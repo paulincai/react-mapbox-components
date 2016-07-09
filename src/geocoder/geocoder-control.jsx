@@ -80,7 +80,7 @@ var Geocoder = require('react-mapbox-components').Geocoder
   }
 
   static childContextTypes = {
-    map: PropTypes.instanceOf(L.Map)
+    map: React.PropTypes.instanceOf(L.Map)
   }
 
   getChildContext () {

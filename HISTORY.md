@@ -1,3 +1,7 @@
+# 0.2.4 (2016-07-08)
+
+  * Fix proptypes error
+
 # 0.2.3 (2016-07-08)
 
   * Add missing context items to controls

@@ -101,9 +101,9 @@ var Mapbox = require('react-mapbox-components').Map
       height: '100%'
     }
   }
-  
+
   static childContextTypes = {
-    map: PropTypes.instanceOf(L.Map)
+    map: React.PropTypes.instanceOf(L.Map)
   }
 
   getChildContext () {
